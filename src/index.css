@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo-list {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 0;
+}
+
+.container {
+  /* min-height: 100vh;
+  min-width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem;
+  font-weight: 0; */
+
+  min-height: 100vh;
+  max-width: 75%;
+  width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  /* flex-shrink: 0; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  margin: 3rem ;
+  font-size: 3rem;
+}
+.header > * {
+  margin: 0 3rem;
+}
+#title {
+  align-self: center;
+  font-weight: 550;
+  font-size: 5rem;
+}
+.theme-button {
+  align-self: end;
+  display: flex;
+  gap: 1rem;
+}
+.theme-button > * {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+#lightThemeButton {
+  background-color: whitesmoke;
+  border: 1px solid rgb(180, 180, 255);
+}
+#darkThemeButton {
+  background-color: darkslategray;
+}
+
+
+
+/* Task form */
+#addTaskForm {
+  min-width: 100%;
+  display: flex;
+
+  margin: 2rem 0 2rem 0;
+}
+#addTaskForm input[type='text'] {
+  flex: 5;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 15px 0 0 15px;
+  font-size: 1.25rem;
+}
+#addTaskButton {
+  flex: 1;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Task list */
+#taskList {
+  margin: 2rem 0rem;
+}
+.task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  margin: 0 0 2rem 0;
+  padding: 0.75rem;
+  border-radius: 2rem;
+}
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+.icon {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+}
+
+
+/* Theme */
+/* Light theme */
+.theme--light {
+  color: rgb(26, 21, 14);
+  background-color: aliceblue !important;
+}
+.form--light {
+  
+}
+.theme--light #addTaskButton {
+  background-color: rgb(223, 249, 250);
+}
+.theme--light #taskList > * {
+  background-color: hsl(210, 4%, 80%);
+}
+.theme--light .icon {
+  background-color: aliceblue;
+}
+
+/* Dark theme */
+.theme--dark {
+  color: aliceblue;
+  background-color: black !important;
+}
+.form--dark {
+  
+}
+.theme--dark #addTaskButton, .theme--dark .icon {
+  background-color: rgb(41, 0, 75);
+}
+.theme--dark #taskList > * {
+  background-color: hsl(210, 34%, 33%);
+}
