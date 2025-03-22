@@ -11,12 +11,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  zoom: 80%;
 }
 
 .todo-list {
-  min-height: 100vh;
+  zoom: 80%;
+  min-height: 125vh;
+  /* min-height: 100vh; */
   min-width: 100vw;
 
   display: flex;
